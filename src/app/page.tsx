@@ -3,6 +3,7 @@ import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import Image from "next/image";
 import {NormantonMarkdown} from "@/markdowns/normanton";
+import {SimvicMarkdown} from "@/markdowns/simvic";
 
 export default async function Home({
                                  searchParams,
@@ -31,6 +32,7 @@ export default async function Home({
                     className="w-full relative h-full rounded-2xl p-10 font-bold space-y-8 text-white bg-neutral-800 border-2 border-orange-500 overflow-y-auto items-center flex flex-col">
                     <span
                         className="w-full text-center items-center text-3xl">Simvic App Privacy Policy</span>
+                    <Markdown className="prose prose-invert prose:w-full" remarkPlugins={[remarkGfm]}>{SimvicMarkdown}</Markdown>
                 </div>
             ),
         },
